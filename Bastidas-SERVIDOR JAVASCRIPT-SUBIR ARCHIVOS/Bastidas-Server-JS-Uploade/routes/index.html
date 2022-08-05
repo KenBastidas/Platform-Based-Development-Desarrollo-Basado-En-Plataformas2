@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My First App</title>
+</head>
+<body>
+  <h1>Subir Imagenes(jpeg, jpg, png)</h1>
+ <!--  SINGLE FILE -->
+<form action="/fileupload" enctype="multipart/form-data" method="POST"> 
+   <input type="file" name="image" />
+   <input type="submit" value="Upload"/>
+</form>
+<h1>Subir archivos(txt, html, js, json, pdf, word(docx),</h1>
+<h1>powerpoint(pptx), excel(xlsx)</h1>
+<!--  SINGLE FILE -->
+<form action="/fileupload2" enctype="multipart/form-data" method="POST"> 
+  <input type="file" name="document" />
+  <input type="submit" value="Upload"/>
+</form>
+</body>
+</html>

@@ -24,14 +24,14 @@ exports.obtenerFacturas = async (req, res) => {
 
 exports.actualizarFactura = async (req, res) => {
     try {
-        const { cliente, tipodePago,FechaEmisionategoria, item, nroFactura,intereses } = req.body;
+        const { cliente, tipodePago,FechaEmision, item, nroFactura,intereses } = req.body;
         let factura = await Factura.findById(req.params.id);
         if(!factura) {
             res.status(404).json({ msg: 'No existe la factura' })
         }
         factura.cliente = cliente;
         factura.tipodePago= tipodePago;
-        factura.FechaEmisionategoria=FechaEmisionategoria;
+        factura.FechaEmision=FechaEmision;
         factura.item=item;
         factura.nroFactura=nroFactura;
         factura.intereses=intereses;

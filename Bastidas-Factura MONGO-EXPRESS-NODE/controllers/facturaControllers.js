@@ -30,11 +30,11 @@ exports.actualizarFactura = async (req, res) => {
             res.status(404).json({ msg: 'No existe la factura' })
         }
         factura.cliente = cliente;
-        Factura.tipodePago= tipodePago;
-        Factura.FechaEmisionategoria=FechaEmisionategoria;
-        Factura.item=item;
-        Factura.nroFactura=nroFactura;
-        Factura.intereses=intereses;
+        factura.tipodePago= tipodePago;
+        factura.FechaEmisionategoria=FechaEmisionategoria;
+        factura.item=item;
+        factura.nroFactura=nroFactura;
+        factura.intereses=intereses;
         factura = await Factura.findOneAndUpdate({ _id: req.params.id },factura, { new: true} )
         res.json(factura);
         
